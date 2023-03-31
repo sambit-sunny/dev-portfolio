@@ -82,7 +82,7 @@ export default function Home() {
                     ))}
                 </Heading>
                 <Title>Full Stack Developer</Title>
-                <Contact rel="contact" href="/contact">
+                <Contact rel="contact" href="#contact">
                     Contact me!
                 </Contact>
             </Container>
