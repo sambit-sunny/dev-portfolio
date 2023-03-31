@@ -64,7 +64,7 @@ export default function Home() {
     const sentence = "Hi, I'm Milind, Web Developer";
 
     return (
-        <Wrapper>
+        <Wrapper id="home">
             <Container>
                 <Heading aria-label={sentence}>
                     {sentence.split(",").map((phrase, index) => (
