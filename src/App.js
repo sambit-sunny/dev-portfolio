@@ -1,5 +1,8 @@
 import { createGlobalStyle } from "styled-components";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 import Home from "./pages/Home";
+import Projects from "./pages/Projects";
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -25,6 +28,9 @@ function App() {
         <>
             <GlobalStyle />
             <Home />
+            <About />
+            <Projects />
+            <Contact />
         </>
     );
 }
