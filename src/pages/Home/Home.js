@@ -3,6 +3,7 @@ import "./Home.css";
 
 export default function Home() {
     const sentence = "Hi, I'm Milind, Web Developer";
+    const title = "Full Stack Developer";
 
     return (
         <div id="home" class="section-wrapper section-full">
@@ -22,7 +23,7 @@ export default function Home() {
                         </>
                     ))}
                 </h1>
-                <p class="gray-text">Full Stack Developer</p>
+                <p class="gray-text">{title}</p>
                 <a class="contact" rel="contact" href="#contact">
                     Contact me!
                 </a>
