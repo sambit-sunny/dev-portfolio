@@ -123,3 +123,66 @@
         line-height: 45px;
     }
 }
+
+@media screen and (max-width: 900px) {
+    .heading {
+        font-size: 8rem;
+        line-height: 7rem;
+    }
+
+    .gray-text {
+        letter-spacing: 1px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .section-full {
+        padding: 9rem 3rem;
+    }
+
+    .text-zone {
+        padding-left: 0rem;
+        padding-right: 0;
+    }
+
+    .heading {
+        font-size: 5.3rem;
+        line-height: 4.5rem;
+    }
+
+    .gray-text {
+        font-size: 1.4rem;
+    }
+
+    .contact {
+        max-width: 200px;
+        height: 42px;
+        line-height: 42px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact {
+        max-width: 170px;
+        height: 40px;
+        line-height: 40px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .heading {
+        font-size: 4.2rem;
+        line-height: 3.6rem;
+    }
+
+    .gray-text {
+        letter-spacing: 0;
+    }
+
+    .contact {
+        max-width: 176px;
+        height: 42px;
+        line-height: 42px;
+        letter-spacing: 3px;
+    }
+}
