@@ -45,6 +45,10 @@
     transition: all 0.3s ease-out;
 }
 
+.heading > span:hover {
+    color: #08fdd8;
+}
+
 .section-wrapper .text-zone p {
     -webkit-transform: translateY(0px);
     -ms-transform: translateY(0px);
