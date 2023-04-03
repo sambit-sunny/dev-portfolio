@@ -1,8 +1,6 @@
 import { motion, useAnimationControls } from "framer-motion";
 import { useState } from "react";
 
-import "./BlastText.css";
-
 export default function BlastText({ children }) {
     const controls = useAnimationControls();
     const [isPlaying, setIsPlaying] = useState(false);
