@@ -3,7 +3,7 @@ import BlastText from "../../components/BlastText/BlastText";
 import "./Home.css";
 
 export default function Home() {
-    const sentence = "Hi, I'm Milind, Web Developer";
+    const sentence = "Hi,I'm Milind,Web Developer";
     const title = "Full Stack Developer";
 
     return (
@@ -12,14 +12,20 @@ export default function Home() {
                 <h1 class="heading" aria-label={sentence}>
                     {sentence.split(",").map((phrase, index) => (
                         <>
-                            {phrase.split("").map((letter, index) => (
-                                <BlastText
-                                    aria-hidden="true"
-                                    key={`phrase${index}`}
-                                >
-                                    {letter}
-                                </BlastText>
-                            ))}
+                            {phrase.split("").map((letter, index) => {
+                                if (letter === " ") {
+                                    return <span>&nbsp;</span>;
+                                } else {
+                                    return (
+                                        <BlastText
+                                            aria-hidden="true"
+                                            key={`phrase${index}`}
+                                        >
+                                            {letter}
+                                        </BlastText>
+                                    );
+                                }
+                            })}
                             <BlastText aria-hidden="true" key={`comma${index}`}>
                                 ,
                             </BlastText>
