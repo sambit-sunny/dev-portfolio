@@ -1,4 +1,5 @@
-// import styled from "styled-components";
+import BlastText from "../../components/BlastText/BlastText";
+
 import "./Home.css";
 
 export default function Home() {
@@ -12,13 +13,16 @@ export default function Home() {
                     {sentence.split(",").map((phrase, index) => (
                         <>
                             {phrase.split("").map((letter, index) => (
-                                <span aria-hidden="true" key={`phrase${index}`}>
+                                <BlastText
+                                    aria-hidden="true"
+                                    key={`phrase${index}`}
+                                >
                                     {letter}
-                                </span>
+                                </BlastText>
                             ))}
-                            <span aria-hidden="true" key={`comma${index}`}>
+                            <BlastText aria-hidden="true" key={`comma${index}`}>
                                 ,
-                            </span>
+                            </BlastText>
                             <br key={`break${index}`} />
                         </>
                     ))}
