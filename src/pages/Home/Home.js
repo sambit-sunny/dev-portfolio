@@ -5,8 +5,8 @@ export default function Home() {
     const sentence = "Hi, I'm Milind, Web Developer";
 
     return (
-        <div id="home" class="wrapper">
-            <div class="container">
+        <div id="home" class="section-wrapper section-full">
+            <div class="text-zone">
                 <h1 class="heading" aria-label={sentence}>
                     {sentence.split(",").map((phrase, index) => (
                         <>
@@ -22,7 +22,7 @@ export default function Home() {
                         </>
                     ))}
                 </h1>
-                <p class="title">Full Stack Developer</p>
+                <p class="gray-text">Full Stack Developer</p>
                 <a class="contact" rel="contact" href="#contact">
                     Contact me!
                 </a>

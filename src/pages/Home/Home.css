@@ -1,44 +1,78 @@
-.wrapper {
+.section-wrapper {
     height: 100vh;
-    min-height: 100vh;
-    position: relative;
-    padding: 6rem 2rem 0;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
-.container {
+.section-full {
+    opacity: 1;
+    min-height: 100vh;
+    padding: 9rem 3rem;
+    position: relative;
+    -webkit-transition: opacity 0.4s;
+    -o-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+}
+
+.section-wrapper .text-zone {
     position: relative;
     z-index: 1;
-    padding: 0 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+}
+
+.section-full .text-zone {
+    padding-left: 5rem;
 }
 
 .heading {
     color: #fff;
     margin: 0;
-    position: relative;
     font-family: Helvetica;
-    font-weight: 700;
-    opacity: 1;
-    font-size: 5rem;
-    line-height: 1;
+    font-weight: 400;
+    font-size: 10.3rem;
+    line-height: 8.7rem;
+    position: relative;
 }
 
-.title {
-    color: #8d8d8d;
+.heading > span {
+    -webkit-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.section-wrapper .text-zone p {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-transition: opacity 0.5s 0.7s, -webkit-transform 0.5s 0.7s;
+    transition: opacity 0.5s 0.7s, -webkit-transform 0.5s 0.7s;
+    -o-transition: opacity 0.5s 0.7s, transform 0.5s 0.7s;
+    transition: opacity 0.5s 0.7s, transform 0.5s 0.7s;
+    transition: opacity 0.5s 0.7s, transform 0.5s 0.7s,
+        -webkit-transform 0.5s 0.7s;
+}
+
+.text-zone p {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.gray-text {
+    font-size: 1.6rem;
     letter-spacing: 4px;
-    font-size: 1.3rem;
-    margin: 2rem 0;
+    margin-top: 3rem;
+    display: block;
+    color: #8d8d8d;
 }
 
 .contact {
-    max-width: 200px;
-    height: 50px;
-    line-height: 45px;
     color: #08fdd8;
     border: 1px solid #08fdd8;
-    font-size: 18px;
+    font-size: 14px;
     letter-spacing: 4px;
     text-decoration: none;
     width: 100%;
@@ -56,4 +90,28 @@
     background-color: #08fdd8;
     background-position: left bottom;
     color: #000;
+}
+
+@media screen and (max-width: 1300px) {
+    .section-full {
+        padding-top: 10rem;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .section-full .text-zone {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .heading {
+        font-size: 8.3rem;
+        line-height: 7.9rem;
+    }
+
+    .contact {
+        max-width: 200px;
+        height: 45px;
+        line-height: 45px;
+    }
 }
