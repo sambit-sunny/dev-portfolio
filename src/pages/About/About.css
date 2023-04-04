@@ -51,3 +51,64 @@ h2 {
     margin-bottom: 1.5rem;
     text-align: justify;
 }
+
+@media screen and (max-width: 1100px) {
+    .section-full .text-zone {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .section-about .text-zone {
+        width: 50%;
+    }
+
+    h2 {
+        font-size: 6.5rem;
+        line-height: 6rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .section-about {
+        display: block;
+    }
+
+    .section-about .text-zone {
+        width: 100%;
+    }
+
+    .text-zone h2 {
+        line-height: 4.9rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .section-full {
+        padding: 9rem 3rem;
+    }
+
+    .section-full .text-zone {
+        padding-left: 0rem;
+        padding-right: 0;
+    }
+
+    h2 {
+        font-size: 5.5rem;
+        line-height: 6rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .text-zone h2,
+    h2 {
+        font-size: 4.5rem;
+        line-height: 4.2rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    h2 {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+}
