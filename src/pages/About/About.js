@@ -1,4 +1,5 @@
 import BlastText from "../../components/BlastText/BlastText";
+import TextCloud from "../../components/TextCloud/TextCloud";
 import "./About.css";
 
 export default function About() {
@@ -39,6 +40,9 @@ export default function About() {
                     challenging software engineering role to drive innovation
                     and success.
                 </p>
+            </div>
+            <div className="skills-chart">
+                <TextCloud />
             </div>
         </div>
     );
