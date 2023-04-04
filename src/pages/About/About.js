@@ -4,29 +4,6 @@ import "./About.css";
 
 export default function About() {
     const text = "Me, Myself and I";
-    const skillsTags = [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "React",
-        "Angular",
-        "Blazor",
-        ".NET",
-        "SQL",
-        "GIT",
-        "GITHUB",
-        "C#",
-        "Python",
-        "Linux",
-        "OOPS",
-    ];
-
-    const skillsOptions = {
-        radius: 300,
-        maxSpeed: "fast",
-        initSpeed: "normal",
-        keep: true,
-    };
 
     return (
         <div id="about" className="section-full section-about">
@@ -65,7 +42,7 @@ export default function About() {
                 </p>
             </div>
             <div className="skills-chart">
-                <TextCloud tags={skillsTags} options={skillsOptions} />
+                <TextCloud />
             </div>
         </div>
     );
