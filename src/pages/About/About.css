@@ -42,6 +42,10 @@ h2 {
     line-height: 6.7rem;
 }
 
+.text-zone span {
+    display: inline-block;
+}
+
 .text-zone p {
     position: relative;
     margin-bottom: 1.5rem;
