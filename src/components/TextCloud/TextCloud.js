@@ -9,7 +9,7 @@ export default function TextCloud({ tags, options }) {
             const container = ".text-sphere";
             TagCloud(container, tags, options);
         };
-    }, [tags, options]);
+    }, []);
 
     return <div className="text-sphere"></div>;
 }
