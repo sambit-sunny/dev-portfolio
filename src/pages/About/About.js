@@ -1,8 +1,32 @@
 import BlastText from "../../components/BlastText/BlastText";
+import TextCloud from "../../components/TextCloud/TextCloud";
 import "./About.css";
 
 export default function About() {
     const text = "Me, Myself and I";
+    const skillsTags = [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Angular",
+        "Blazor",
+        ".NET",
+        "SQL",
+        "GIT",
+        "GITHUB",
+        "C#",
+        "Python",
+        "Linux",
+        "OOPS",
+    ];
+
+    const skillsOptions = {
+        radius: 300,
+        maxSpeed: "fast",
+        initSpeed: "normal",
+        keep: true,
+    };
 
     return (
         <div id="about" className="section-full section-about">
@@ -39,6 +63,9 @@ export default function About() {
                     challenging software engineering role to drive innovation
                     and success.
                 </p>
+            </div>
+            <div className="skills-chart">
+                <TextCloud tags={skillsTags} options={skillsOptions} />
             </div>
         </div>
     );
