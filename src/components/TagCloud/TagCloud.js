@@ -41,14 +41,14 @@ export default function TagCloud() {
         console.log("Loading TagCanvas...");
         const cloud = window.TagCanvas;
         const tagCanvasOptions = {
-            textColour: "#08FDD8",
+            textColour: "#08fdd8",
             outlineThickness: 0.5,
-            outlineColour: "#FE0853",
-            maxSpeed: 0.06,
+            outlineColour: "#fe0853",
+            maxSpeed: 0.03,
             freezeActive: true,
             shuffleTags: true,
             shape: "sphere",
-            zoom: 0.8,
+            zoom: 0.9,
             wheelZoom: false,
             noSelect: true,
             textFont: null,
@@ -56,6 +56,7 @@ export default function TagCloud() {
             fadeIn: 3000,
             initial: [0.3, -0.1],
             depth: 1.1,
+            pinchZoom: true,
         };
         try {
             cloud.Start("canvas", "taglist", tagCanvasOptions);
