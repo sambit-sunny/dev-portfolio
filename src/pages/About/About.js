@@ -3,7 +3,7 @@ import TagCloud from "../../components/TagCloud/TagCloud";
 import "./About.css";
 
 export default function About() {
-    const text = "Me, Myself and I";
+    const text = "About Me";
 
     const skills = [
         { href: "#git_", title: "Git" },
