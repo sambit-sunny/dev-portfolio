@@ -60,7 +60,7 @@ h2 {
 }
 
 .projects-section {
-    padding: 0 3rem;
+    padding: 0 10rem;
     position: relative;
 }
 
@@ -104,7 +104,7 @@ h2 {
 
 @media screen and (max-width: 600px) {
     .section-full {
-        padding: 9rem 3rem;
+        padding: 9rem 6rem;
     }
 
     .section-full .text-zone {
