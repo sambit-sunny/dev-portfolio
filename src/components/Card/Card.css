@@ -33,12 +33,18 @@
     text-decoration: none;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .image {
     object-fit: cover;
     width: 100%;
     aspect-ratio: 1 / 1;
+    transition: transform 0.4s, -webkit-transform 0.4s;
+}
+
+.image:hover {
+    transform: scale(1.14);
 }
 
 .title {
