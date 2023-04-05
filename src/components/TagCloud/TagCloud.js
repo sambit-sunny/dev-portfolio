@@ -2,41 +2,7 @@ import { useEffect } from "react";
 // eslint-disable-next-line no-unused-vars
 import { TagCanvas } from "jquery-tagcanvas";
 
-export default function TagCloud() {
-    const skills = [
-        { href: "#git_", title: "Git" },
-        { href: "#json_", title: "JSON" },
-        { href: "#solidity_", title: "Solidity" },
-        { href: "#html_", title: "HTML" },
-        { href: "#react_", title: "React" },
-        { href: "#python_", title: "Python" },
-        { href: "#sql_", title: "SQL" },
-        { href: "#shopify_", title: "Shopify" },
-        { href: "#aws_", title: "AWS" },
-        { href: "#wordpress_", title: "WordPress" },
-        { href: "#npm_", title: "npm" },
-        { href: "#css_", title: "CSS" },
-        { href: "#jquery_", title: "jQuery" },
-        { href: "#js_", title: "JavaScript" },
-        { href: "#c++_", title: "C++" },
-        { href: "#java_", title: "Java" },
-        { href: "#php_", title: "PHP" },
-        { href: "#selenium_", title: "Selenium" },
-        { href: "#remix_", title: "Remix" },
-        { href: "#ganache_", title: "Ganache" },
-        { href: "#hubspot_", title: "HubSpot" },
-        { href: "#node.js_", title: "Node.js" },
-        { href: "#hiveos_", title: "HiveOS" },
-        { href: "#crypto_", title: "Crypto" },
-        { href: "#mining_", title: "Mining" },
-        { href: "#photoshop_", title: "Photoshop" },
-        { href: "#illustrator_", title: "Illustrator" },
-        { href: "#premier-pro_", title: "Premier Pro" },
-        { href: "#truffle_", title: "Truffle" },
-        { href: "#pyqt_", title: "PyQT" },
-        { href: "#hardhat_", title: "Hardhat" },
-    ];
-
+export default function TagCloud({ skills }) {
     useEffect(() => {
         console.log("Loading TagCanvas...");
         const cloud = window.TagCanvas;

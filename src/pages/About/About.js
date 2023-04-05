@@ -5,6 +5,21 @@ import "./About.css";
 export default function About() {
     const text = "Me, Myself and I";
 
+    const skills = [
+        { href: "#git_", title: "Git" },
+        { href: "#html_", title: "HTML" },
+        { href: "#react_", title: "React" },
+        { href: "#python_", title: "Python" },
+        { href: "#sql_", title: "SQL" },
+        { href: "#css_", title: "CSS" },
+        { href: "#js_", title: "JavaScript" },
+        { href: "#dotnet_", title: ".NET" },
+        { href: "#blazor_", title: "Blazor" },
+        { href: "#csharp_", title: "C#" },
+        { href: "#azure_", title: "Azure" },
+        { href: "#web-development_", title: "Web Development" },
+    ];
+
     return (
         <div id="about" className="section-full section-about">
             <div className="text-zone">
@@ -42,7 +57,7 @@ export default function About() {
                 </p>
             </div>
             <div className="skills-chart">
-                <TagCloud />
+                <TagCloud skills={skills} />
             </div>
         </div>
     );
