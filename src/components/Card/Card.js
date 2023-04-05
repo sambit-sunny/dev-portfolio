@@ -1,3 +1,4 @@
+import ShuffleText from "../ShuffleText/ShuffleText";
 import "./Card.css";
 
 export default function Card({ link, imgSrc, imgAlt, title }) {
@@ -15,7 +16,9 @@ export default function Card({ link, imgSrc, imgAlt, title }) {
                         View <br /> Project
                     </div>
                 </a>
-                <p className="title">{title}</p>
+                <div className="title">
+                    <ShuffleText text={title} />
+                </div>
             </div>
         </div>
     );
