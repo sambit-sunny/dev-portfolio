@@ -55,6 +55,23 @@ h2 {
     text-align: justify;
 }
 
+.projects-section {
+    padding: 9rem 3rem;
+    position: relative;
+}
+
+.projects-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 5rem;
+}
+
 @media screen and (max-width: 1100px) {
     .section-full .text-zone {
         padding-left: 2rem;
@@ -64,6 +81,10 @@ h2 {
     h2 {
         font-size: 6.5rem;
         line-height: 6rem;
+    }
+
+    .projects-details {
+        padding: 0 2rem;
     }
 }
 
