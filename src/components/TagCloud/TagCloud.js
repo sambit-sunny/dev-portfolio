@@ -67,7 +67,7 @@ export default function TagCloud() {
     }, []);
 
     return (
-        <div className="container">
+        <div id="canvas-container" className="container">
             <canvas
                 id="canvas"
                 width="820"

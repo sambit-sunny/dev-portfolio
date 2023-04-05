@@ -41,7 +41,9 @@ export default function About() {
                     and success.
                 </p>
             </div>
-            <TagCloud />
+            <div className="skills-chart">
+                <TagCloud />
+            </div>
         </div>
     );
 }
