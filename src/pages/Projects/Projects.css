@@ -1,0 +1,118 @@
+.section-full {
+    min-height: 100vh;
+    padding: 9rem 3rem;
+    position: relative;
+    opacity: 1;
+}
+
+.section-work {
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.section-work .text-zone {
+    width: 40%;
+}
+
+.section-full .text-zone {
+    padding-left: 5rem;
+}
+
+.text-zone header {
+    position: relative;
+}
+
+h2 {
+    font-family: Helvetica;
+    color: #08fdd8;
+    font-weight: 400;
+    margin-top: 0;
+    position: relative;
+    margin-bottom: 40px;
+    left: -10px;
+    font-size: 7.3rem;
+    line-height: 6.7rem;
+}
+
+.text-zone span {
+    display: inline-block;
+    -webkit-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.text-zone p {
+    position: relative;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+@media screen and (max-width: 1100px) {
+    .section-full .text-zone {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .section-work .text-zone {
+        width: 50%;
+    }
+
+    h2 {
+        font-size: 6.5rem;
+        line-height: 6rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .section-work {
+        display: block;
+    }
+
+    .section-work .text-zone {
+        width: 100%;
+    }
+
+    .text-zone h2 {
+        line-height: 4.9rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .section-full {
+        padding: 9rem 3rem;
+    }
+
+    .section-full .text-zone {
+        padding-left: 0rem;
+        padding-right: 0;
+    }
+
+    h2 {
+        font-size: 5.5rem;
+        line-height: 6rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .text-zone h2,
+    h2 {
+        font-size: 4.4rem;
+        line-height: 4.2rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .text-zone h2,
+    h2 {
+        font-size: 3.5rem;
+        line-height: 4rem;
+    }
+}
