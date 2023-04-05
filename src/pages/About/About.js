@@ -1,9 +1,28 @@
 import BlastText from "../../components/BlastText/BlastText";
-import TextCloud from "../../components/TextCloud/TextCloud";
+import TagCloud from "../../components/TagCloud/TagCloud";
 import "./About.css";
 
 export default function About() {
     const text = "Me, Myself and I";
+
+    const skills = [
+        { href: "#git_", title: "Git" },
+        { href: "#html_", title: "HTML" },
+        { href: "#react_", title: "React" },
+        { href: "#python_", title: "Python" },
+        { href: "#sql_", title: "SQL" },
+        { href: "#css_", title: "CSS" },
+        { href: "#js_", title: "JavaScript" },
+        { href: "#dotnet_", title: ".NET" },
+        { href: "#blazor_", title: "Blazor" },
+        { href: "#angular_", title: "Angular" },
+        { href: "#csharp_", title: "C#" },
+        { href: "#azure_", title: "Azure" },
+        { href: "#web-development_", title: "Web Development" },
+        { href: "#front-end", title: "Front End" },
+        { href: "#solid-principles_", title: "SOLID" },
+        { href: "#api_", title: "API" },
+    ];
 
     return (
         <div id="about" className="section-full section-about">
@@ -42,7 +61,7 @@ export default function About() {
                 </p>
             </div>
             <div className="skills-chart">
-                <TextCloud />
+                <TagCloud skills={skills} />
             </div>
         </div>
     );
