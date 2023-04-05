@@ -43,8 +43,39 @@
     transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
-.image:hover {
+.link:hover .image {
     transform: scale(1.14);
+}
+
+.view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: clamp(80px, 35%, 350px);
+    aspect-ratio: 1 / 1;
+    z-index: 9;
+    background-color: #08fdd8;
+    color: #fd2155;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: all 150ms ease-out;
+    -o-transition: all 150ms ease-out;
+    transition: all 150ms ease-out;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    -ms-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.link:hover .view {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) scale(1.4);
+    -ms-transform: translate(-50%, -50%) scale(1.4);
+    transform: translate(-50%, -50%) scale(1.4);
 }
 
 .title {
