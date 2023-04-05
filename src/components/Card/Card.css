@@ -21,8 +21,7 @@
     width: 48%;
 }
 
-.link {
-    text-decoration: none;
+.content {
     width: 100%;
     height: 100%;
     display: flex;
@@ -31,21 +30,27 @@
     align-items: center;
 }
 
+.link {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
 .image {
     object-fit: cover;
     width: 100%;
-    height: calc(100% - 4.5rem);
+    aspect-ratio: 1 / 1;
 }
 
 .title {
     text-align: center;
-    font-size: 13px;
+    font-size: 2rem;
     font-weight: 600;
     color: #fd2155;
     text-transform: uppercase;
     letter-spacing: 3px;
     border: 0;
-    /* margin-bottom: 1rem;
-    margin-top: 1rem; */
+    margin-bottom: -1rem;
+    margin-top: 1rem;
     display: block;
 }
