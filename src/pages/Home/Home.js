@@ -1,4 +1,5 @@
 import BlastText from "../../components/BlastText/BlastText";
+import Button from "../../components/Button/Button";
 
 import "./Home.css";
 
@@ -34,9 +35,7 @@ export default function Home() {
                     ))}
                 </h1>
                 <p class="gray-text">{title}</p>
-                <a class="contact" rel="contact" href="#contact">
-                    Contact me!
-                </a>
+                <Button title="Contact me!" rel="contact" href="#contact" />
             </div>
         </div>
     );
