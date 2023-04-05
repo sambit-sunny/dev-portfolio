@@ -1,4 +1,5 @@
 import BlastText from "../../components/BlastText/BlastText";
+import TagCloud from "../../components/TagCloud/TagCloud";
 import "./About.css";
 
 export default function About() {
@@ -40,6 +41,7 @@ export default function About() {
                     and success.
                 </p>
             </div>
+            <TagCloud />
         </div>
     );
 }
