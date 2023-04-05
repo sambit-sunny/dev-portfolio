@@ -15,9 +15,13 @@ export default function About() {
         { href: "#js_", title: "JavaScript" },
         { href: "#dotnet_", title: ".NET" },
         { href: "#blazor_", title: "Blazor" },
+        { href: "#angular_", title: "Angular" },
         { href: "#csharp_", title: "C#" },
         { href: "#azure_", title: "Azure" },
         { href: "#web-development_", title: "Web Development" },
+        { href: "#front-end", title: "Front End" },
+        { href: "#solid-principles_", title: "SOLID" },
+        { href: "#api_", title: "API" },
     ];
 
     return (
