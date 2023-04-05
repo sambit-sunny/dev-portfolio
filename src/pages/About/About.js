@@ -3,7 +3,7 @@ import TagCloud from "../../components/TagCloud/TagCloud";
 import "./About.css";
 
 export default function About() {
-    const text = "Me, Myself and I";
+    const text = "About Me";
 
     const skills = [
         { href: "#git_", title: "Git" },
@@ -43,21 +43,20 @@ export default function About() {
                     </h2>
                 </header>
                 <p>
-                    I'm Highly motivated and skilled software engineer with 2
-                    years of experience in developing and implementing software
-                    solutions.
+                    Ever since my family got a modem internet connection, I've
+                    been fascinated by the web and all the endless possibilities
+                    that come along with it.
                 </p>
                 <p>
-                    Proficient in .NET, Python, React, JavaScript, and SQL.
-                    Skilled in problem-solving and teamwork, with a track record
-                    of delivering high-quality projects on time and within
-                    budget.
+                    Over the course of my career I've had several opportunities
+                    to work in a vast spectrum of web technologies that let me
+                    gather a significant amount of experience in a rather short
+                    period of time. In the process, I've worked with and learnt
+                    from countless amazing and ambitious people.
                 </p>
                 <p>
-                    Committed to continuous learning and development to stay up
-                    to date with the latest industry trends. Seeking a
-                    challenging software engineering role to drive innovation
-                    and success.
+                    I currently work as a full stack developer with an
+                    insatiable passion for technology
                 </p>
             </div>
             <div className="skills-chart">
