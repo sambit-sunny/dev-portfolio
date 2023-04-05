@@ -4,7 +4,6 @@ import { TagCanvas } from "jquery-tagcanvas";
 
 export default function TagCloud({ skills }) {
     useEffect(() => {
-        console.log("Loading TagCanvas...");
         const cloud = window.TagCanvas;
         const tagCanvasOptions = {
             textColour: "#08fdd8",
