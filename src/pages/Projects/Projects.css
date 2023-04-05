@@ -19,7 +19,7 @@
 }
 
 .section-work .text-zone {
-    width: 40%;
+    position: relative;
 }
 
 .section-full .text-zone {
@@ -61,10 +61,6 @@ h2 {
         padding-right: 2rem;
     }
 
-    .section-work .text-zone {
-        width: 50%;
-    }
-
     h2 {
         font-size: 6.5rem;
         line-height: 6rem;
@@ -74,10 +70,6 @@ h2 {
 @media screen and (max-width: 900px) {
     .section-work {
         display: block;
-    }
-
-    .section-work .text-zone {
-        width: 100%;
     }
 
     .text-zone h2 {
