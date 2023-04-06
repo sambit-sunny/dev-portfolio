@@ -31,18 +31,24 @@ export default function Contact() {
                 <div className="contact-form-container">
                     <form id="contact-form" autoComplete="off">
                         <div className="row">
-                            <input
-                                className="input-field"
-                                placeholder="Name"
-                                type="text"
-                                name="name"
-                            />
-                            <input
-                                className="input-field"
-                                placeholder="Email"
-                                type="email"
-                                name="email"
-                            />
+                            <div>
+                                <input
+                                    className="input-field"
+                                    placeholder="Name"
+                                    type="text"
+                                    name="name"
+                                />
+                                <span className="focus"></span>
+                            </div>
+                            <div>
+                                <input
+                                    className="input-field"
+                                    placeholder="Email"
+                                    type="email"
+                                    name="email"
+                                />
+                                <span className="focus"></span>
+                            </div>
                         </div>
                         <div className="row">
                             <input
@@ -51,6 +57,7 @@ export default function Contact() {
                                 type="text"
                                 name="subject"
                             />
+                            <span className="focus"></span>
                         </div>
                         <div className="row">
                             <textarea
@@ -58,6 +65,7 @@ export default function Contact() {
                                 placeholder="Message"
                                 name="msg"
                             ></textarea>
+                            <span className="focus"></span>
                         </div>
                         <div className="row">
                             <Button title="Send Message!" />

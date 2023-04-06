@@ -66,6 +66,71 @@ h2 {
     position: relative;
 }
 
+.contact-form-container input[type="text"],
+.contact-form-container input[type="email"] {
+    position: relative;
+    width: 100%;
+    border: 0;
+    background: #2b2b2b;
+    height: 50px;
+    font-size: 16px;
+    color: #8d8d8d;
+    padding: 0 20px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.contact-form-container textarea {
+    width: 100%;
+    border: 0;
+    background: #2b2b2b;
+    height: 50px;
+    font-size: 16px;
+    color: #8d8d8d;
+    padding: 20px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 150px;
+    outline: none;
+}
+
+.contact-form-container .row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.contact-form-container .row div {
+    width: 100%;
+    display: flex;
+}
+
+.contact-form-container .row div .focus {
+    width: calc(50% - 5px);
+}
+
+.focus {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    height: 52px;
+    cursor: pointer;
+    padding-bottom: 2px;
+    background: linear-gradient(to right, #08fdd8 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 0.3s ease-out;
+}
+
+.contact-form-container textarea ~ .focus {
+    min-height: 152px;
+}
+
+.input-field:focus ~ .focus {
+    background-position: left bottom;
+}
+
 @media screen and (max-width: 1100px) {
     .section-full .text-zone {
         padding-left: 2rem;
