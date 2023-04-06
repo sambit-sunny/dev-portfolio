@@ -6,7 +6,7 @@ export default function Contact() {
     const text = "Contact Me";
 
     return (
-        <div id="contact" className="section-full section-about">
+        <div id="contact" className="section-full section-contact">
             <div className="text-zone">
                 <header>
                     <h2 aria-label={text}>
