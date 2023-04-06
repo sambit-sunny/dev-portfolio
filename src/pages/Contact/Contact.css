@@ -132,6 +132,10 @@ h2 {
     background-position: left bottom;
 }
 
+.input-field:focus::placeholder {
+    color: transparent;
+}
+
 .row:last-of-type {
     justify-content: flex-end;
 }
