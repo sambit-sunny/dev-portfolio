@@ -1,9 +1,21 @@
+import { useState } from "react";
+
 import BlastText from "../../components/BlastText/BlastText";
 import Button from "../../components/Button/Button";
 import "./Contact.css";
 
 export default function Contact() {
     const text = "Contact Me";
+
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [subject, setSubject] = useState("");
+    const [message, setMessage] = useState("");
+
+    const handleSubmit = () => {
+        console.log("SUBMIT");
+        console.log(name, email, subject, message);
+    };
 
     return (
         <div id="contact" className="section-full section-contact">
@@ -24,9 +36,9 @@ export default function Contact() {
                     </h2>
                 </header>
                 <p>
-                    I’m interested in freelance opportunities – especially
+                    I'm interested in freelance opportunities - especially
                     ambitious or large projects. However, if you have other
-                    request or question, don’t hesitate to use the form.
+                    request or question, don't hesitate to use the form.
                 </p>
                 <div className="contact-form-container">
                     <form id="contact-form" autoComplete="off">
@@ -37,6 +49,10 @@ export default function Contact() {
                                     placeholder="Name"
                                     type="text"
                                     name="name"
+                                    value={name}
+                                    onChange={(e) => {
+                                        setName(e.target.value);
+                                    }}
                                 />
                                 <span className="focus"></span>
                             </div>
@@ -44,8 +60,12 @@ export default function Contact() {
                                 <input
                                     className="input-field"
                                     placeholder="Email"
-                                    type="email"
+                                    type="text"
                                     name="email"
+                                    value={email}
+                                    onChange={(e) => {
+                                        setEmail(e.target.value);
+                                    }}
                                 />
                                 <span className="focus"></span>
                             </div>
@@ -56,6 +76,10 @@ export default function Contact() {
                                 placeholder="Subject"
                                 type="text"
                                 name="subject"
+                                value={subject}
+                                onChange={(e) => {
+                                    setSubject(e.target.value);
+                                }}
                             />
                             <span className="focus"></span>
                         </div>
@@ -64,10 +88,14 @@ export default function Contact() {
                                 className="input-field"
                                 placeholder="Message"
                                 name="msg"
+                                value={message}
+                                onChange={(e) => {
+                                    setMessage(e.target.value);
+                                }}
                             ></textarea>
                             <span className="focus"></span>
                         </div>
-                        <div className="row">
+                        <div className="row" onClick={handleSubmit}>
                             <Button title="Send Message!" />
                         </div>
                     </form>
