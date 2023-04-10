@@ -4,6 +4,24 @@ import BlastText from "../../components/BlastText/BlastText";
 import Button from "../../components/Button/Button";
 import "./Contact.css";
 
+function validate(value, rules) {
+    let isValid = false;
+    let errors = [];
+    rules.forEach((rule) => {
+        const re = new RegExp(rule.pattern);
+        if (!re.test(value)) {
+            errors.push(rule.message);
+        }
+    });
+    if (errors.length > 0) {
+        isValid = false;
+    } else {
+        isValid = true;
+    }
+
+    return { isValid, errors };
+}
+
 export default function Contact() {
     const text = "Contact Me";
 
@@ -15,6 +33,29 @@ export default function Contact() {
     const handleSubmit = () => {
         console.log("SUBMIT");
         console.log(name, email, subject, message);
+        const { isValid: isValidName, errors: nameErrors } = validate(name, [
+            { pattern: "^.+$", message: "Name is required" },
+            {
+                pattern: "^[A-Za-z]+$",
+                message: "Name must consist of only alphabets",
+            },
+        ]);
+        const { isValid: isValidEmail, errors: emailErrors } = validate(email, [
+            { pattern: "^.+$", message: "Email is required" },
+            {
+                pattern: "^[w-.]+@([w-]+.)+[w-]{2,4}$",
+                message: "Email format is incorrect",
+            },
+        ]);
+        const { isValid: isValidSubject, errors: subjectErrors } = validate(
+            subject,
+            [{ pattern: "^.+$", message: "Subject is required" }]
+        );
+        const { isValid: isValidMessage, errors: messageErrors } = validate(
+            message,
+            [{ pattern: "^.+$", message: "Message is required" }]
+        );
+        console.log(nameErrors, emailErrors, subjectErrors, messageErrors);
     };
 
     return (
