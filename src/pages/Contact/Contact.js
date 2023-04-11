@@ -67,16 +67,16 @@ export default function Contact() {
             subject,
             [{ pattern: "^.+$", message: "Subject is required" }]
         );
-        setIsValidName(subjectValidity);
-        setNameErrors(errorsInSubject);
+        setIsValidSubject(subjectValidity);
+        setSubjectErrors(errorsInSubject);
 
         const { isValid: messageValidity, errors: errorsInMessage } = validate(
             message,
             [{ pattern: "^.+$", message: "Message is required" }]
         );
-        setIsValidName(messageValidity);
-        setNameErrors(errorsInMessage);
-        
+        setIsValidMessage(messageValidity);
+        setMessageErrors(errorsInMessage);
+
         console.log(nameErrors, emailErrors, subjectErrors, messageErrors);
     };
 
