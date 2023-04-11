@@ -30,31 +30,53 @@ export default function Contact() {
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
 
+    const [isValidName, setIsValidName] = useState(false);
+    const [isValidEmail, setIsValidEmail] = useState(false);
+    const [isValidSubject, setIsValidSubject] = useState(false);
+    const [isValidMessage, setIsValidMessage] = useState(false);
+
+    const [nameErrors, setNameErrors] = useState([]);
+    const [emailErrors, setEmailErrors] = useState([]);
+    const [subjectErrors, setSubjectErrors] = useState([]);
+    const [messageErrors, setMessageErrors] = useState([]);
+
     const handleSubmit = () => {
         console.log("SUBMIT");
         console.log(name, email, subject, message);
-        const { isValid: isValidName, errors: nameErrors } = validate(name, [
+        const { isValid: nameValidity, errors: errorsInName } = validate(name, [
             { pattern: "^.+$", message: "Name is required" },
             {
                 pattern: "^[A-Za-z]+$",
                 message: "Name must consist of only alphabets",
             },
         ]);
-        const { isValid: isValidEmail, errors: emailErrors } = validate(email, [
+        setIsValidName(nameValidity);
+        setNameErrors(errorsInName);
+
+        const { isValid: emailValidity, errors: errorsInEmail } = validate(email, [
             { pattern: "^.+$", message: "Email is required" },
             {
                 pattern: "^[w-.]+@([w-]+.)+[w-]{2,4}$",
                 message: "Email format is incorrect",
             },
         ]);
-        const { isValid: isValidSubject, errors: subjectErrors } = validate(
+        setIsValidEmail(emailValidity);
+        setEmailErrors(errorsInEmail);
+
+        const { isValid: subjectValidity, errors: errorsInSubject } = validate(
             subject,
             [{ pattern: "^.+$", message: "Subject is required" }]
         );
-        const { isValid: isValidMessage, errors: messageErrors } = validate(
+        setIsValidName(subjectValidity);
+        setNameErrors(errorsInSubject);
+
+        const { isValid: messageValidity, errors: errorsInMessage } = validate(
             message,
             [{ pattern: "^.+$", message: "Message is required" }]
         );
+        setIsValidName(messageValidity);
+        setNameErrors(errorsInMessage);
+        
         console.log(nameErrors, emailErrors, subjectErrors, messageErrors);
     };
 
