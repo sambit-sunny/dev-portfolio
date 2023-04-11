@@ -25,6 +25,8 @@ function validate(value, rules) {
 export default function Contact() {
     const text = "Contact Me";
 
+    const [isSubmitted, setIsSubmitted] = useState(false);
+
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [subject, setSubject] = useState("");
@@ -41,6 +43,7 @@ export default function Contact() {
     const [messageErrors, setMessageErrors] = useState([]);
 
     const handleSubmit = () => {
+        setIsSubmitted(true);
         console.log("SUBMIT");
         console.log(name, email, subject, message);
         const { isValid: nameValidity, errors: errorsInName } = validate(name, [
@@ -111,7 +114,11 @@ export default function Contact() {
                         <div className="row">
                             <div>
                                 <input
-                                    className="input-field"
+                                    className={`input-field ${
+                                        isSubmitted && !isValidName
+                                            ? "error"
+                                            : ""
+                                    }`}
                                     placeholder="Name"
                                     type="text"
                                     name="name"
@@ -124,7 +131,11 @@ export default function Contact() {
                             </div>
                             <div>
                                 <input
-                                    className="input-field"
+                                    className={`input-field ${
+                                        isSubmitted && !isValidEmail
+                                            ? "error"
+                                            : ""
+                                    }`}
                                     placeholder="Email"
                                     type="text"
                                     name="email"
@@ -138,7 +149,11 @@ export default function Contact() {
                         </div>
                         <div className="row">
                             <input
-                                className="input-field"
+                                className={`input-field ${
+                                    isSubmitted && !isValidSubject
+                                        ? "error"
+                                        : ""
+                                }`}
                                 placeholder="Subject"
                                 type="text"
                                 name="subject"
@@ -151,7 +166,11 @@ export default function Contact() {
                         </div>
                         <div className="row">
                             <textarea
-                                className="input-field"
+                                className={`input-field ${
+                                    isSubmitted && !isValidMessage
+                                        ? "error"
+                                        : ""
+                                }`}
                                 placeholder="Message"
                                 name="msg"
                                 value={message}
