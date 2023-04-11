@@ -53,13 +53,16 @@ export default function Contact() {
         setIsValidName(nameValidity);
         setNameErrors(errorsInName);
 
-        const { isValid: emailValidity, errors: errorsInEmail } = validate(email, [
-            { pattern: "^.+$", message: "Email is required" },
-            {
-                pattern: "^[w-.]+@([w-]+.)+[w-]{2,4}$",
-                message: "Email format is incorrect",
-            },
-        ]);
+        const { isValid: emailValidity, errors: errorsInEmail } = validate(
+            email,
+            [
+                { pattern: "^.+$", message: "Email is required" },
+                {
+                    pattern: "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",
+                    message: "Email format is incorrect",
+                },
+            ]
+        );
         setIsValidEmail(emailValidity);
         setEmailErrors(errorsInEmail);
 
