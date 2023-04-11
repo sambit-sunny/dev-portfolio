@@ -136,6 +136,10 @@ h2 {
     color: transparent;
 }
 
+.error ~ .focus {
+    background: red;
+}
+
 .row:last-of-type {
     justify-content: flex-end;
 }
