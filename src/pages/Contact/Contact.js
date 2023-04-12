@@ -187,10 +187,8 @@ export default function Contact() {
                     </form>
                 </div>
             </div>
-            <div className="stuff">
-                <div className="shapes-container">
-                    <LiveShapes />
-                </div>
+            <div className="shapes-container">
+                <LiveShapes />
             </div>
         </div>
     );
