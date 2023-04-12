@@ -106,9 +106,9 @@ export default function Contact() {
                     </h2>
                 </header>
                 <p>
-                    I'm interested in freelance opportunities - especially
-                    ambitious or large projects. However, if you have other
-                    request or question, don't hesitate to use the form.
+                    I'm interested in ambitious opportunities. However, if you
+                    have other request or question, don't hesitate to use the
+                    form. Also, feel free to provide any feedback
                 </p>
                 <div className="contact-form-container">
                     <form id="contact-form" autoComplete="off">
