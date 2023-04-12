@@ -1,0 +1,15 @@
+.styled-link {
+    text-decoration: none;
+    color: #08fdd8;
+    font-weight: 500;
+    cursor: pointer;
+    padding-bottom: 2px;
+    transition: background-size 0.3s;
+    background: linear-gradient(0deg, #08fdd8, #08fdd8) no-repeat 100% 100%/0
+        10%;
+}
+
+.styled-link:hover {
+    background-position-x: left;
+    background-size: 100% 10%;
+}

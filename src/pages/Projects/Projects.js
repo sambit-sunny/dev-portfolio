@@ -1,6 +1,7 @@
 import BlastText from "../../components/BlastText/BlastText";
 import Button from "../../components/Button/Button";
 import Card from "../../components/Card/Card";
+import Link from "../../components/Link/Link";
 
 import "./Projects.css";
 
@@ -80,13 +81,10 @@ export default function Projects() {
                         about.
                         <br />
                         Interested to see some more? Visit{" "}
-                        <a
-                            rel="noopener noreferrer"
-                            href="https://github.com/milind452"
-                            target="_blank"
-                        >
-                            my github
-                        </a>{" "}
+                        <Link
+                            href={"https://github.com/milind452"}
+                            content={"my github"}
+                        />{" "}
                         page
                     </p>
                     <Button title="See More!" rel="projects" href="#projects" />
