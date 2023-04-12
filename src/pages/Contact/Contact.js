@@ -3,6 +3,7 @@ import { useState } from "react";
 import BlastText from "../../components/BlastText/BlastText";
 import Button from "../../components/Button/Button";
 import "./Contact.css";
+import LiveShapes from "../../components/LiveShapes/LiveShapes";
 
 function validate(value, rules) {
     let isValid = false;
@@ -187,7 +188,9 @@ export default function Contact() {
                 </div>
             </div>
             <div className="stuff">
-                <div>Stuff</div>
+                <div className="shapes-container">
+                    <LiveShapes />
+                </div>
             </div>
         </div>
     );
