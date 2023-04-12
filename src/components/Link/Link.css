@@ -1,4 +1,4 @@
-.link {
+.styled-link {
     text-decoration: none;
     color: #08fdd8;
     font-weight: 500;
@@ -9,7 +9,7 @@
         10%;
 }
 
-.link:hover {
+.styled-link:hover {
     background-position-x: left;
     background-size: 100% 10%;
 }
