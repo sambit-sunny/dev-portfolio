@@ -47,7 +47,6 @@ export default function BlastText({ children }) {
             animate={initialControls}
         >
             <motion.span
-                ref={ref}
                 animate={controls}
                 onAnimationComplete={() => setIsPlaying(false)}
                 onMouseOver={() => {
