@@ -1,4 +1,4 @@
-import BlastText from "../../components/BlastText/BlastText";
+import Heading2 from "../../components/Heading2/Heading2";
 import TagCloud from "../../components/TagCloud/TagCloud";
 import "./About.css";
 
@@ -28,19 +28,7 @@ export default function About() {
         <div id="about" className="section-full section-about">
             <div className="text-zone">
                 <header>
-                    <h2 aria-label={text}>
-                        {text.split("").map((letter, index) => {
-                            if (letter === " ") {
-                                return <span>&nbsp;</span>;
-                            } else {
-                                return (
-                                    <BlastText aria-hidden="true" key={index}>
-                                        {letter}
-                                    </BlastText>
-                                );
-                            }
-                        })}
-                    </h2>
+                    <Heading2 sentence={text} />
                 </header>
                 <p>
                     Ever since my family got a modem internet connection, I've
