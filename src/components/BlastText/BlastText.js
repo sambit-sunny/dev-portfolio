@@ -1,9 +1,19 @@
 import { motion, useAnimationControls } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 export default function BlastText({ children }) {
     const controls = useAnimationControls();
+    const initialControls = useAnimationControls();
     const [isPlaying, setIsPlaying] = useState(false);
+    const [ref, inView] = useInView();
+    const variants = {
+        visible: {
+            opacity: 1,
+            transition: { duration: 2 },
+        },
+        hidden: { opacity: 0 },
+    };
 
     const rubberBand = () => {
         controls.start({
@@ -23,17 +33,31 @@ export default function BlastText({ children }) {
         setIsPlaying(true);
     };
 
+    useEffect(() => {
+        if (inView) {
+            initialControls.start("visible");
+        }
+    }, [initialControls, inView]);
+
     return (
         <motion.span
-            animate={controls}
-            onAnimationComplete={() => setIsPlaying(false)}
-            onMouseOver={() => {
-                if (!isPlaying) {
-                    rubberBand();
-                }
-            }}
+            ref={ref}
+            initial="hidden"
+            variants={variants}
+            animate={initialControls}
         >
-            {children}
+            <motion.span
+                ref={ref}
+                animate={controls}
+                onAnimationComplete={() => setIsPlaying(false)}
+                onMouseOver={() => {
+                    if (!isPlaying) {
+                        rubberBand();
+                    }
+                }}
+            >
+                {children}
+            </motion.span>
         </motion.span>
     );
 }
