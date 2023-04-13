@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-import BlastText from "../../components/BlastText/BlastText";
 import Button from "../../components/Button/Button";
 import "./Contact.css";
 import LiveShapes from "../../components/LiveShapes/LiveShapes";
+import Heading2 from "../../components/Heading2/Heading2";
 
 function validate(value, rules) {
     let isValid = false;
@@ -91,19 +91,7 @@ export default function Contact() {
         <div id="contact" className="section-full section-contact">
             <div className="text-zone">
                 <header>
-                    <h2 aria-label={text}>
-                        {text.split("").map((letter, index) => {
-                            if (letter === " ") {
-                                return <span>&nbsp;</span>;
-                            } else {
-                                return (
-                                    <BlastText aria-hidden="true" key={index}>
-                                        {letter}
-                                    </BlastText>
-                                );
-                            }
-                        })}
-                    </h2>
+                    <Heading2 sentence={text} />
                 </header>
                 <p>
                     I'm interested in ambitious opportunities. However, if you

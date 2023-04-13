@@ -1,6 +1,6 @@
-import BlastText from "../../components/BlastText/BlastText";
 import Button from "../../components/Button/Button";
 import Card from "../../components/Card/Card";
+import Heading2 from "../../components/Heading2/Heading2";
 import Link from "../../components/Link/Link";
 
 import "./Projects.css";
@@ -58,22 +58,7 @@ export default function Projects() {
             <div className="section-full section-work">
                 <div className="text-zone">
                     <header>
-                        <h2 aria-label={text}>
-                            {text.split("").map((letter, index) => {
-                                if (letter === " ") {
-                                    return <span>&nbsp;</span>;
-                                } else {
-                                    return (
-                                        <BlastText
-                                            aria-hidden="true"
-                                            key={index}
-                                        >
-                                            {letter}
-                                        </BlastText>
-                                    );
-                                }
-                            })}
-                        </h2>
+                        <Heading2 sentence={text} />
                     </header>
                     <p>
                         A collection of recent projects chosen by me. I've done
