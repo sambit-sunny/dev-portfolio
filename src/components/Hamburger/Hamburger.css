@@ -7,8 +7,8 @@
     top: 30px;
     right: 40px;
     border-radius: 3px;
-    transition: all ease 0.3s;
-    z-index: 1
+    transition: all 0.3s ease;
+    z-index: 1;
 }
 
 .ham-overlay:hover + .ham {
@@ -35,6 +35,23 @@
     position: relative;
     width: 3rem;
     height: 0.4rem;
-    background-color: #fff;
-    /* opacity: 0.9; */
+    background: #fff;
+    background-position: left bottom;
+    transition: all 0.5s ease;
+}
+
+.ham-overlay > .bar.left {
+    background-position: right bottom;
+}
+
+.ham-overlay:hover .bar.right {
+    background: linear-gradient(to right, #fff 50%, transparent 50%) no-repeat
+        right bottom / 200% 100%;
+    opacity: 0.7;
+}
+
+.ham-overlay:hover .bar.left {
+    background: linear-gradient(to left, #fff 50%, transparent 50%) no-repeat
+        left bottom / 200% 100%;
+    opacity: 0.7;
 }
