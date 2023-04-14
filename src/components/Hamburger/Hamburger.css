@@ -1,4 +1,4 @@
-.ham {
+.ham-overlay {
     background-color: #000;
     opacity: 0.3;
     width: 5rem;
@@ -11,11 +11,12 @@
     z-index: 1;
 }
 
-.ham-overlay:hover + .ham {
+.ham:hover + .ham-overlay {
     border-radius: 50%;
 }
 
-.ham-overlay {
+.ham {
+    all: unset;
     background: transparent;
     width: 5rem;
     aspect-ratio: 1 / 1;
@@ -29,9 +30,10 @@
     gap: 0.5rem;
     border-radius: 3px;
     z-index: 2;
+    cursor: pointer;
 }
 
-.ham-overlay > .bar {
+.ham > .bar {
     position: relative;
     width: 3rem;
     height: 0.4rem;
@@ -40,17 +42,17 @@
     transition: all 0.5s ease;
 }
 
-.ham-overlay > .bar.left {
+.ham > .bar.left {
     background-position: right bottom;
 }
 
-.ham-overlay:hover .bar.right {
+.ham:focus .bar.right {
     background: linear-gradient(to right, #fff 50%, transparent 50%) no-repeat
         right bottom / 200% 100%;
     opacity: 0.7;
 }
 
-.ham-overlay:hover .bar.left {
+.ham:focus .bar.left {
     background: linear-gradient(to left, #fff 50%, transparent 50%) no-repeat
         left bottom / 200% 100%;
     opacity: 0.7;
