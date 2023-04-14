@@ -1,0 +1,40 @@
+.ham {
+    background-color: #000;
+    opacity: 0.3;
+    width: 5rem;
+    aspect-ratio: 1 / 1;
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    border-radius: 3px;
+    transition: all ease 0.3s;
+    z-index: 1
+}
+
+.ham-overlay:hover + .ham {
+    border-radius: 50%;
+}
+
+.ham-overlay {
+    background: transparent;
+    width: 5rem;
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 3px;
+    z-index: 2;
+}
+
+.ham-overlay > .bar {
+    position: relative;
+    width: 3rem;
+    height: 0.4rem;
+    background-color: #fff;
+    /* opacity: 0.9; */
+}
