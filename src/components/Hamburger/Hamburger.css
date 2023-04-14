@@ -39,21 +39,55 @@
     height: 0.4rem;
     background: #fff;
     background-position: left bottom;
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
 }
 
 .ham > .bar.left {
     background-position: right bottom;
 }
 
-.ham:focus .bar.right {
-    background: linear-gradient(to right, #fff 50%, transparent 50%) no-repeat
-        right bottom / 200% 100%;
-    opacity: 0.7;
+.ham:hover > .bar.right {
+    animation-name: hamburger-right;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
 }
 
-.ham:focus .bar.left {
-    background: linear-gradient(to left, #fff 50%, transparent 50%) no-repeat
-        left bottom / 200% 100%;
-    opacity: 0.7;
+.ham:hover > .bar.left {
+    animation-name: hamburger-left;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+}
+
+@keyframes hamburger-right {
+    0% {
+        background: #fff;
+        background-position: left bottom;
+    }
+    50% {
+        background: linear-gradient(to right, #fff 50%, transparent 50%)
+            no-repeat right bottom / 200% 100%;
+        opacity: 0.7;
+    }
+    100% {
+        background: #fff;
+        background-position: left bottom;
+    }
+}
+
+@keyframes hamburger-left {
+    0% {
+        background: #fff;
+        background-position: right bottom;
+    }
+    50% {
+        background: linear-gradient(to left, #fff 50%, transparent 50%)
+            no-repeat left bottom / 200% 100%;
+        opacity: 0.7;
+    }
+    100% {
+        background: #fff;
+        background-position: right bottom;
+    }
 }
