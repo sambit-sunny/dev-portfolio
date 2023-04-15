@@ -46,17 +46,11 @@
 }
 
 .ham:hover > .bar.right {
-    animation-name: hamburger-right;
-    animation-duration: 1s;
-    animation-timing-function: ease;
-    animation-iteration-count: 1;
+    animation: hamburger-right 1 1s ease;
 }
 
 .ham:hover > .bar.left {
-    animation-name: hamburger-left;
-    animation-duration: 1s;
-    animation-timing-function: ease;
-    animation-iteration-count: 1;
+    animation: hamburger-left 1 1s ease;
 }
 
 @keyframes hamburger-right {
