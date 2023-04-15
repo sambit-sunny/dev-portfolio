@@ -39,7 +39,6 @@
     height: 0.4rem;
     background: #fff;
     background-position: left bottom;
-    /* transition: all 0.5s ease; */
 }
 
 .ham > .bar.left {
@@ -89,5 +88,43 @@
     100% {
         background: #fff;
         background-position: right bottom;
+    }
+}
+
+.close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ham:has(.close) + .ham-overlay {
+    border-radius: 50%;
+}
+
+.ham:hover > .close {
+    animation: spin 1 1s cubic-bezier(0.24, 0.98, 0.93, 0.82);
+}
+
+.close > .cross {
+    position: absolute;
+    width: 3rem;
+    height: 0.4rem;
+    background: #fff;
+}
+
+.cross:first-of-type {
+    transform: rotate(135deg);
+}
+
+.cross:last-of-type {
+    transform: rotate(-135deg);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(720deg);
     }
 }
