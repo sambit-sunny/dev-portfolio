@@ -105,6 +105,10 @@ export default function Contact() {
                 },
                 process.env.REACT_APP_EMAILJS_USER_ID
             );
+            setName("");
+            setEmail("");
+            setSubject("");
+            setMessage("");
         }
     };
 
