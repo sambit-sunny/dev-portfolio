@@ -5,6 +5,9 @@ import Link from "../../components/Link/Link";
 
 import "./Projects.css";
 
+import movieDB from "../../assets/images/projects/movieDB.jpg";
+import myReads from "../../assets/images/projects/myReads.jpg";
+
 export default function Projects() {
     const text = "My Portfolio";
 
@@ -12,7 +15,7 @@ export default function Projects() {
         {
             id: 1,
             link: "https://milind452-react-moviedb.netlify.app/",
-            imgSrc: "https://play-lh.googleusercontent.com/IO3niAyss5tFXAQP176P0Jk5rg_A_hfKPNqzC4gb15WjLPjo5I-f7oIZ9Dqxw2wPBAg",
+            imgSrc: movieDB,
             imgAlt: "Movie Tracking App",
             title: "Movie DB",
         },
@@ -26,7 +29,7 @@ export default function Projects() {
         {
             id: 3,
             link: "https://milind452.github.io/my-reads/",
-            imgSrc: "https://play-lh.googleusercontent.com/6l3serA9ZbmHZxFYbISeSn0lmRAQqP2nyUDEuBtrUeI_M6umB48ebyP3Dci2k919SRJE",
+            imgSrc: myReads,
             imgAlt: "Book Tracking App",
             title: "My Reads",
         },
