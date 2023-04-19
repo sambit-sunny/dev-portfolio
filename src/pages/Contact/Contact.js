@@ -5,6 +5,8 @@ import "./Contact.css";
 import LiveShapes from "../../components/LiveShapes/LiveShapes";
 import Heading2 from "../../components/Heading2/Heading2";
 
+import emailjs from "emailjs-com";
+
 function validate(value, rules) {
     let isValid = false;
     let errors = [];
@@ -85,6 +87,25 @@ export default function Contact() {
         setMessageErrors(errorsInMessage);
 
         console.log(nameErrors, emailErrors, subjectErrors, messageErrors);
+
+        if (
+            nameValidity &&
+            emailValidity &&
+            subjectValidity &&
+            messageValidity
+        ) {
+            emailjs.send(
+                process.env.REACT_APP_EMAILJS_SERVICE_ID,
+                process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+                {
+                    subject: subject,
+                    name: name,
+                    message: message,
+                    email: email,
+                },
+                process.env.REACT_APP_EMAILJS_USER_ID
+            );
+        }
     };
 
     return (
