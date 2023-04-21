@@ -6,6 +6,8 @@ import LiveShapes from "../../components/LiveShapes/LiveShapes";
 import Heading2 from "../../components/Heading2/Heading2";
 
 import emailjs from "emailjs-com";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function validate(value, rules) {
     let isValid = false;
