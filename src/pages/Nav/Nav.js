@@ -15,15 +15,58 @@ export default function Nav({ isNavOpen, setIsNavOpen }) {
                 >
                     <div id="nav">
                         <div className="icons-wrapper">
-                            <div className="icons">
-                                <FaLinkedin />
-                                <FaEnvelope />
-                                <FaGithub />
+                            <div class="icons">
+                                <motion.div
+                                    initial={{ y: "100vh", opacity: 0 }}
+                                    animate={{ y: 0, opacity: 1 }}
+                                    transition={{
+                                        delay: 0.3,
+                                        type: "spring",
+                                        stiffness: 260,
+                                        damping: 20,
+                                    }}
+                                >
+                                    <FaLinkedin />
+                                </motion.div>
+                                <motion.div
+                                    initial={{ y: "100vh", opacity: 0 }}
+                                    animate={{ y: 0, opacity: 1 }}
+                                    transition={{
+                                        delay: 0.4,
+                                        type: "spring",
+                                        stiffness: 260,
+                                        damping: 20,
+                                    }}
+                                >
+                                    <FaEnvelope />
+                                </motion.div>
+                                <motion.div
+                                    initial={{ y: "100vh", opacity: 0 }}
+                                    animate={{ y: 0, opacity: 1 }}
+                                    transition={{
+                                        delay: 0.5,
+                                        type: "spring",
+                                        stiffness: 260,
+                                        damping: 20,
+                                    }}
+                                >
+                                    <FaGithub />
+                                </motion.div>
                             </div>
                         </div>
                         <div className="links-wrapper">
                             <div className="links">
-                                <div className="link">
+                                <motion.div
+                                    className="link"
+                                    initial={{ x: "100vh", opacity: 0 }}
+                                    animate={{ x: 0, opacity: 1 }}
+                                    transition={{
+                                        delay: 0.3,
+                                        type: "spring",
+                                        stiffness: 260,
+                                        damping: 20,
+                                    }}
+                                >
                                     <Link
                                         to="/"
                                         onClick={() => {
@@ -32,8 +75,18 @@ export default function Nav({ isNavOpen, setIsNavOpen }) {
                                     >
                                         Home
                                     </Link>
-                                </div>
-                                <div className="link">
+                                </motion.div>
+                                <motion.div
+                                    className="link"
+                                    initial={{ x: "100vh", opacity: 0 }}
+                                    animate={{ x: 0, opacity: 1 }}
+                                    transition={{
+                                        delay: 0.4,
+                                        type: "spring",
+                                        stiffness: 260,
+                                        damping: 20,
+                                    }}
+                                >
                                     <Link
                                         to="/about"
                                         onClick={() => {
@@ -42,8 +95,18 @@ export default function Nav({ isNavOpen, setIsNavOpen }) {
                                     >
                                         About
                                     </Link>
-                                </div>
-                                <div className="link">
+                                </motion.div>
+                                <motion.div
+                                    className="link"
+                                    initial={{ x: "100vh", opacity: 0 }}
+                                    animate={{ x: 0, opacity: 1 }}
+                                    transition={{
+                                        delay: 0.5,
+                                        type: "spring",
+                                        stiffness: 260,
+                                        damping: 20,
+                                    }}
+                                >
                                     <Link
                                         to="/projects"
                                         onClick={() => {
@@ -52,8 +115,18 @@ export default function Nav({ isNavOpen, setIsNavOpen }) {
                                     >
                                         Projects
                                     </Link>
-                                </div>
-                                <div className="link">
+                                </motion.div>
+                                <motion.div
+                                    className="link"
+                                    initial={{ x: "100vh", opacity: 0 }}
+                                    animate={{ x: 0, opacity: 1 }}
+                                    transition={{
+                                        delay: 0.6,
+                                        type: "spring",
+                                        stiffness: 260,
+                                        damping: 20,
+                                    }}
+                                >
                                     <Link
                                         to="/contact"
                                         onClick={() => {
@@ -62,7 +135,7 @@ export default function Nav({ isNavOpen, setIsNavOpen }) {
                                     >
                                         Contact
                                     </Link>
-                                </div>
+                                </motion.div>
                             </div>
                         </div>
                     </div>
