@@ -7,6 +7,7 @@ import Projects from "./pages/Projects/Projects";
 import Hamburger from "./components/Hamburger/Hamburger";
 
 import "./App.css";
+import Nav from "./pages/Nav/Nav";
 
 function App() {
     const [isNavOpen, setIsNavOpen] = useState(false);
@@ -14,10 +15,16 @@ function App() {
     return (
         <>
             <Hamburger isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
-            <Home />
-            <About />
-            <Projects />
-            <Contact />
+            {isNavOpen ? (
+                <Nav />
+            ) : (
+                <>
+                    <Home />
+                    <About />
+                    <Projects />
+                    <Contact />
+                </>
+            )}
         </>
     );
 }
