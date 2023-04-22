@@ -26,7 +26,13 @@ export default function Nav({ isNavOpen, setIsNavOpen }) {
                                         damping: 20,
                                     }}
                                 >
-                                    <FaLinkedin />
+                                    <a
+                                        rel="noreferrer"
+                                        href="https://www.linkedin.com/in/milind452"
+                                        target="_blank"
+                                    >
+                                        <FaLinkedin />
+                                    </a>
                                 </motion.div>
                                 <motion.div
                                     initial={{ y: "100vh", opacity: 0 }}
@@ -38,7 +44,9 @@ export default function Nav({ isNavOpen, setIsNavOpen }) {
                                         damping: 20,
                                     }}
                                 >
-                                    <FaEnvelope />
+                                    <a href="mailto:mohapatra.milind@gmail.com">
+                                        <FaEnvelope />
+                                    </a>
                                 </motion.div>
                                 <motion.div
                                     initial={{ y: "100vh", opacity: 0 }}
@@ -50,7 +58,13 @@ export default function Nav({ isNavOpen, setIsNavOpen }) {
                                         damping: 20,
                                     }}
                                 >
-                                    <FaGithub />
+                                    <a
+                                        rel="noreferrer"
+                                        href="https://github.com/milind452"
+                                        target="_blank"
+                                    >
+                                        <FaGithub />
+                                    </a>
                                 </motion.div>
                             </div>
                         </div>

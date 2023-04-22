@@ -56,7 +56,7 @@
     font-weight: 700;
 }
 
-.link > a {
+a {
     text-decoration: none;
     color: inherit;
 }
