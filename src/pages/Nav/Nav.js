@@ -15,7 +15,7 @@ export default function Nav({ isNavOpen, setIsNavOpen }) {
                 >
                     <div id="nav">
                         <div className="icons-wrapper">
-                            <div class="icons">
+                            <div className="icons">
                                 <motion.div
                                     initial={{ y: "100vh", opacity: 0 }}
                                     animate={{ y: 0, opacity: 1 }}

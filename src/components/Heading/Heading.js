@@ -31,7 +31,7 @@ export default function Heading({ sentence }) {
     };
 
     return (
-        <h1 class="heading" aria-label={sentence}>
+        <h1 className="heading" aria-label={sentence}>
             <motion.div variants={container} initial="hidden" animate="show">
                 {sentence.split(",").map((phrase, index) => (
                     <>
