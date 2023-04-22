@@ -56,7 +56,36 @@
     font-weight: 700;
 }
 
-.link > a {
+a {
     text-decoration: none;
     color: inherit;
+}
+
+.link > a,
+.icons a {
+    transition: all 0.3s ease;
+}
+
+.link > a:hover,
+.icons a:hover {
+    color: #08fdd8;
+}
+
+@media screen and (max-width: 600px) {
+    #nav {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .icons-wrapper {
+        max-width: 100%;
+    }
+
+    .icons {
+        gap: 50px;
+    }
+
+    .links {
+        font-size: 6rem;
+    }
 }
