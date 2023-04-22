@@ -1,0 +1,124 @@
+.ham-overlay {
+    background-color: #000;
+    opacity: 0.3;
+    width: 5rem;
+    aspect-ratio: 1 / 1;
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.ham:hover + .ham-overlay {
+    border-radius: 50%;
+}
+
+.ham {
+    all: unset;
+    background: transparent;
+    width: 5rem;
+    aspect-ratio: 1 / 1;
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 3px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.ham > .bar {
+    position: relative;
+    width: 3rem;
+    height: 0.4rem;
+    background: #fff;
+    background-position: left bottom;
+}
+
+.ham > .bar.left {
+    background-position: right bottom;
+}
+
+.ham:hover > .bar.right {
+    animation: hamburger-right 1 1s ease;
+}
+
+.ham:hover > .bar.left {
+    animation: hamburger-left 1 1s ease;
+}
+
+@keyframes hamburger-right {
+    0% {
+        background: #fff;
+        background-position: left bottom;
+    }
+    50% {
+        background: linear-gradient(to right, #fff 50%, transparent 50%)
+            no-repeat right bottom / 200% 100%;
+        opacity: 0.7;
+    }
+    100% {
+        background: #fff;
+        background-position: left bottom;
+    }
+}
+
+@keyframes hamburger-left {
+    0% {
+        background: #fff;
+        background-position: right bottom;
+    }
+    50% {
+        background: linear-gradient(to left, #fff 50%, transparent 50%)
+            no-repeat left bottom / 200% 100%;
+        opacity: 0.7;
+    }
+    100% {
+        background: #fff;
+        background-position: right bottom;
+    }
+}
+
+.close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ham:has(.close) + .ham-overlay {
+    border-radius: 50%;
+}
+
+.ham:hover > .close {
+    animation: spin 1 1s cubic-bezier(0.24, 0.98, 0.93, 0.82);
+}
+
+.close > .cross {
+    position: absolute;
+    width: 3rem;
+    height: 0.4rem;
+    background: #fff;
+}
+
+.cross:first-of-type {
+    transform: rotate(135deg);
+}
+
+.cross:last-of-type {
+    transform: rotate(-135deg);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(720deg);
+    }
+}
