@@ -1,8 +1,8 @@
 import "./Nav.css";
-
+import { Link } from "react-router-dom";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
-export default function Nav() {
+export default function Nav({ setIsNavOpen }) {
     return (
         <div id="nav">
             <div className="icons-wrapper">
@@ -14,10 +14,46 @@ export default function Nav() {
             </div>
             <div className="links-wrapper">
                 <div className="links">
-                    <div className="link">Home</div>
-                    <div className="link">About</div>
-                    <div className="link">Projects</div>
-                    <div className="link">Contact</div>
+                    <div className="link">
+                        <Link
+                            to="/"
+                            onClick={() => {
+                                setIsNavOpen(false);
+                            }}
+                        >
+                            Home
+                        </Link>
+                    </div>
+                    <div className="link">
+                        <Link
+                            to="/about"
+                            onClick={() => {
+                                setIsNavOpen(false);
+                            }}
+                        >
+                            About
+                        </Link>
+                    </div>
+                    <div className="link">
+                        <Link
+                            to="/projects"
+                            onClick={() => {
+                                setIsNavOpen(false);
+                            }}
+                        >
+                            Projects
+                        </Link>
+                    </div>
+                    <div className="link">
+                        <Link
+                            to="/contact"
+                            onClick={() => {
+                                setIsNavOpen(false);
+                            }}
+                        >
+                            Contact
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>

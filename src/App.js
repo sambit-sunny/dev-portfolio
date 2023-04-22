@@ -8,6 +8,7 @@ import Hamburger from "./components/Hamburger/Hamburger";
 
 import "./App.css";
 import Nav from "./pages/Nav/Nav";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
     const [isNavOpen, setIsNavOpen] = useState(false);
@@ -15,16 +16,29 @@ function App() {
     return (
         <>
             <Hamburger isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
-            {isNavOpen ? (
-                <Nav />
-            ) : (
-                <>
-                    <Home />
-                    <About />
-                    <Projects />
-                    <Contact />
-                </>
-            )}
+            <BrowserRouter>
+                {isNavOpen ? (
+                    <Nav setIsNavOpen={setIsNavOpen} />
+                ) : (
+                    <Routes>
+                        <Route
+                            exact
+                            path="/"
+                            element={
+                                <>
+                                    <Home />
+                                    <About />
+                                    <Projects />
+                                    <Contact />
+                                </>
+                            }
+                        />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/projects" element={<Projects />} />
+                        <Route path="/contact" element={<Contact />} />
+                    </Routes>
+                )}
+            </BrowserRouter>
         </>
     );
 }
