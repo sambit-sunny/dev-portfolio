@@ -4,7 +4,7 @@ import "./Card.css";
 export default function Card({ link, imgSrc, imgAlt, title }) {
     return (
         <div className="card">
-            <div class="content">
+            <div className="content">
                 <a
                     className="link"
                     href={link}

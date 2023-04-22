@@ -8,10 +8,10 @@ export default function Home() {
     const title = "Full Stack Developer";
 
     return (
-        <div id="home" class="section-wrapper section-full">
-            <div class="text-zone">
+        <div id="home" className="section-wrapper section-full">
+            <div className="text-zone">
                 <Heading sentence={sentence} />
-                <p class="gray-text">{title}</p>
+                <p className="gray-text">{title}</p>
                 <Button title="Contact me!" rel="contact" href="#contact" />
             </div>
         </div>
