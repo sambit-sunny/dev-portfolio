@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import BlastText from "../../components/BlastText/BlastText";
+import Logo from "../Logo/Logo";
 
 export default function Heading({ sentence }) {
     const container = {
@@ -39,16 +40,20 @@ export default function Heading({ sentence }) {
                             if (letter === " ") {
                                 return <span>&nbsp;</span>;
                             } else {
-                                return (
-                                    <motion.span variants={item}>
-                                        <BlastText
-                                            aria-hidden="true"
-                                            key={`phrase${index}`}
-                                        >
-                                            {letter}
-                                        </BlastText>
-                                    </motion.span>
-                                );
+                                if (letter === "M") {
+                                    return <Logo />;
+                                } else {
+                                    return (
+                                        <motion.span variants={item}>
+                                            <BlastText
+                                                aria-hidden="true"
+                                                key={`phrase${index}`}
+                                            >
+                                                {letter}
+                                            </BlastText>
+                                        </motion.span>
+                                    );
+                                }
                             }
                         })}
                         <motion.span variants={item}>
