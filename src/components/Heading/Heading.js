@@ -66,11 +66,16 @@ export default function Heading({ sentence }) {
                                 }
                             }
                         })}
-                        <motion.span variants={item}>
-                            <BlastText aria-hidden="true" key={`comma${index}`}>
-                                ,
-                            </BlastText>
-                        </motion.span>
+                        {index + 1 !== sentence.split(",").length && (
+                            <motion.span variants={item}>
+                                <BlastText
+                                    aria-hidden="true"
+                                    key={`comma${index}`}
+                                >
+                                    ,
+                                </BlastText>
+                            </motion.span>
+                        )}
                         <br key={`break${index}`} />
                     </>
                 ))}
