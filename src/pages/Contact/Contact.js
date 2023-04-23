@@ -81,7 +81,7 @@ export default function Contact() {
 
         const { isValid: messageValidity, errors: errorsInMessage } = validate(
             message,
-            [{ pattern: "^.+$", message: "Message is required" }]
+            [{ pattern: "^(.|\n)+$", message: "Message is required" }]
         );
         setIsValidMessage(messageValidity);
         setMessageErrors(errorsInMessage);
