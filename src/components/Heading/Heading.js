@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import BlastText from "../../components/BlastText/BlastText";
+import Logo from "../Logo/Logo";
 
 export default function Heading({ sentence }) {
     const container = {
@@ -39,16 +40,30 @@ export default function Heading({ sentence }) {
                             if (letter === " ") {
                                 return <span>&nbsp;</span>;
                             } else {
-                                return (
-                                    <motion.span variants={item}>
-                                        <BlastText
-                                            aria-hidden="true"
-                                            key={`phrase${index}`}
+                                if (letter === "M") {
+                                    return (
+                                        <motion.span
+                                            animate={{
+                                                opacity: 1,
+                                                scale: [1, 2, 2, 1, 1],
+                                                rotate: [0, 0, 270, 270, 0],
+                                            }}
                                         >
-                                            {letter}
-                                        </BlastText>
-                                    </motion.span>
-                                );
+                                            <Logo key={`phrase${index}`} />
+                                        </motion.span>
+                                    );
+                                } else {
+                                    return (
+                                        <motion.span variants={item}>
+                                            <BlastText
+                                                aria-hidden="true"
+                                                key={`phrase${index}`}
+                                            >
+                                                {letter}
+                                            </BlastText>
+                                        </motion.span>
+                                    );
+                                }
                             }
                         })}
                         <motion.span variants={item}>
