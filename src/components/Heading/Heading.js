@@ -41,7 +41,17 @@ export default function Heading({ sentence }) {
                                 return <span>&nbsp;</span>;
                             } else {
                                 if (letter === "M") {
-                                    return <Logo />;
+                                    return (
+                                        <motion.span
+                                            animate={{
+                                                opacity: 1,
+                                                scale: [1, 2, 2, 1, 1],
+                                                rotate: [0, 0, 270, 270, 0],
+                                            }}
+                                        >
+                                            <Logo key={`phrase${index}`} />
+                                        </motion.span>
+                                    );
                                 } else {
                                     return (
                                         <motion.span variants={item}>
