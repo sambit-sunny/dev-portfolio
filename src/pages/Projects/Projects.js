@@ -7,6 +7,7 @@ import "./Projects.css";
 
 import movieDB from "../../assets/images/projects/movieDB.jpg";
 import myReads from "../../assets/images/projects/myReads.jpg";
+import oreo from "../../assets/images/projects/oreo.png";
 
 export default function Projects() {
     const text = "My Portfolio";
@@ -22,7 +23,7 @@ export default function Projects() {
         {
             id: 2,
             link: "https://milind452.github.io/oreo/",
-            imgSrc: "https://apprecs.org/gp/images/app-icons/300/8a/io.tinbits.memorigi.jpg",
+            imgSrc: oreo,
             imgAlt: "Project Management App",
             title: "Oreo",
         },
